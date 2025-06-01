@@ -1,12 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
-import DarkModeToggle from "./components/DarkModeToggle";
 
-export default function Layout({ children }) {
+export default function DarkModeToggle() {
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
-    // Check for saved preference
     const saved = localStorage.getItem("theme");
     if (saved === "dark") {
       document.documentElement.setAttribute("data-theme", "dark");
@@ -22,9 +20,8 @@ export default function Layout({ children }) {
   };
 
   return (
-    <>
-      <DarkModeToggle toggleTheme={toggleTheme} dark={dark} />
-      {children}
-    </>
+    <button onClick={toggleTheme} style={{ margin: "1rem" }}>
+      {dark ? "☀️ Light Mode" : "🌙 Dark Mode"}
+    </button>
   );
 }
