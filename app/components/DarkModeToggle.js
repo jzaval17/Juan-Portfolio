@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import styles from "./styles/DarkModeToggle.module.css";
 
 export default function DarkModeToggle() {
   const [dark, setDark] = useState(false);
@@ -20,7 +21,7 @@ export default function DarkModeToggle() {
   };
 
   return (
-    <button onClick={toggleTheme} style={{ margin: "1rem" }}>
+    <button onClick={toggleTheme} className={styles.toggleBtn}>
       {dark ? "☀️ Light Mode" : "🌙 Dark Mode"}
     </button>
   );
