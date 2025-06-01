@@ -1,14 +1,18 @@
 /* app/components/styles/Projects.module.css */
 
 .projects {
-  /* The .section class (in globals.css) already adds top/bottom padding */
+  background: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 2rem 1.5rem;
 }
 
 .heading {
+  color: var(--text-color);
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: #111827; /* gray-900 */
 }
 
 .list {
@@ -91,4 +95,25 @@
 
 .bullets li:hover {
   background: #f3f4f6;
+}
+
+.projectItem {
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.projectTitle {
+  color: var(--link-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.projectDescription {
+  color: var(--text-color);
+  margin-top: 0.5rem;
 }
