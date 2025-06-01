@@ -15,6 +15,7 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   scroll-behavior: smooth;
+  transition: background 0.4s, color 0.4s, border-color 0.4s;
 }
 
 a {
@@ -99,4 +100,8 @@ a:hover {
   --text-color: #eee;
   --link-color: #61dafb;
   --border-color: #333;
+}
+
+.sectionClassName {
+  transition: background 0.4s, color 0.4s, border-color 0.4s;
 }
