@@ -83,8 +83,11 @@
 }
 
 .caret {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--link-color);
+  transition: transform 0.2s;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* Details section */
