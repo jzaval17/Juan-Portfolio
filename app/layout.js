@@ -2,8 +2,7 @@
 import Header from "./components/Header";
 import DarkModeToggle from "./components/DarkModeToggle";
 import "./globals.css";
-import PageTransition from "./components/PageTransition";
-import { usePathname } from "next/navigation";
+import AppContainer from "./components/AppContainer";
 
 export const metadata = {
   title: "Juan Zavala — Portfolio",
@@ -11,7 +10,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const pathname = typeof window !== "undefined" ? window.location.pathname : "";
   return (
     <html lang="en">
       <head />
@@ -19,9 +17,9 @@ export default function RootLayout({ children }) {
         <Header />
         <DarkModeToggle />
         <main className="container">
-          <PageTransition pathname={pathname}>
+          <AppContainer>
             {children}
-          </PageTransition>
+          </AppContainer>
         </main>
       </body>
     </html>
