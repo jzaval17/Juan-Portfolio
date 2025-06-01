@@ -105,3 +105,23 @@ a:hover {
 .sectionClassName {
   transition: background 0.4s, color 0.4s, border-color 0.4s;
 }
+
+.heading,
+.title,
+.name,
+.contactHeading {
+  color: var(--text-color);
+}
+
+.section,
+.container,
+.box, /* or whatever your main wrapper class is */
+.item {
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.link {
+  color: var(--link-color);
+}
