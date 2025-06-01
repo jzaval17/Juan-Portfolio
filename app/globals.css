@@ -87,6 +87,7 @@ a:hover {
 
 :root {
   --bg-color: #fff;
+  --header-bg-color: #fff;         /* new */
   --text-color: #222;
   --link-color: #0070f3;
   --border-color: #e5e7eb;
@@ -94,6 +95,7 @@ a:hover {
 
 [data-theme="dark"] {
   --bg-color: #181818;
+  --header-bg-color: #141414;      /* new: slightly darker than bg */
   --text-color: #eee;
   --link-color: #61dafb;
   --border-color: #333;
