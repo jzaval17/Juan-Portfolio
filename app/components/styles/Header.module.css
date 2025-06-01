@@ -9,8 +9,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1rem;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e7eb; /* light gray */
+  background-color: var(--bg-color); /* updated */
+  border-bottom: 1px solid var(--border-color, #333); /* fallback for border */
 }
 
 /* 2. Left side: social icons */
@@ -31,8 +31,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: invert(20%) sepia(0%) saturate(0%) hue-rotate(180deg)
-    brightness(90%) contrast(90%); /* makes a black SVG appear dark gray */
+  /* Use filter for dark mode if needed, or leave as is for SVGs that adapt */
 }
 
 /* 3. Center: your name/logo */
@@ -47,7 +46,7 @@
 .logo {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #1f2937; /* gray-800 */
+  color: var(--text-color); /* updated */
   text-decoration: none;
 }
 
@@ -60,13 +59,13 @@
 
 .link {
   font-size: 0.875rem;
-  color: #4b5563; /* gray-600 */
+  color: var(--text-color); /* updated */
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .link:hover {
-  color: #1f2937; /* gray-800 */
+  color: var(--link-color); /* updated */
 }
 
 /* 5. Mobile tweak: shrink gaps/text on small screens */
@@ -91,6 +90,13 @@
 
 .iconLink:focus,
 .link:focus {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--link-color);
   outline-offset: 2px;
+}
+
+:root {
+  --border-color: #e5e7eb;
+}
+[data-theme="dark"] {
+  --border-color: #333;
 }
