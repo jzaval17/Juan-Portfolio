@@ -94,9 +94,3 @@
   outline-offset: 2px;
 }
 
-:root {
-  --border-color: #e5e7eb;
-}
-[data-theme="dark"] {
-  --border-color: #333;
-}

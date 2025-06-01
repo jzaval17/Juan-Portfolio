@@ -89,10 +89,12 @@ a:hover {
   --bg-color: #fff;
   --text-color: #222;
   --link-color: #0070f3;
+  --border-color: #e5e7eb;
 }
 
 [data-theme="dark"] {
   --bg-color: #181818;
   --text-color: #eee;
   --link-color: #61dafb;
+  --border-color: #333;
 }
