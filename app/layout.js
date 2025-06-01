@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Juan Zavala — Portfolio",
-  description: "Portfolio of Juan Zavala, third-year CS student at Cal Poly",
+  description: "Portfolio of Juan Zavala, fourth-year CS student at Cal Poly",
 };
 
 export default function RootLayout({ children }) {

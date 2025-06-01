@@ -8,7 +8,7 @@ export default function Contact() {
       <h2 className={styles.heading}>Contact</h2>
       <p className={styles.text}>
         📧 Email me at{" "}
-        <a href="mailto:juan.zavala@calpoly.edu" className={styles.link}>
+        <a href="mailto:jazavala805@gmail.com" className={styles.link}>
           juan.zavala@calpoly.edu
         </a>
       </p>

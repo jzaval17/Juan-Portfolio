@@ -10,7 +10,7 @@ export default function Hero() {
         {/* 1. Put your headshot here in public/profile.jpg */}
         <div className={styles.profilePicWrapper}>
           <Image
-            src="/profile.jpg"
+            src="/Juan-pfp.JPG"
             alt="Juan Zavala"
             width={128}
             height={128}
@@ -24,7 +24,7 @@ export default function Hero() {
           <span className="wave">👋</span>
         </h1>
         <p className={styles.tagline}>
-          Third-year Computer Science student at Cal Poly, Data-enthusiast turned
+          Fourth-year Computer Science student at Cal Poly, Data-enthusiast turned
           aspiring software engineer.
         </p>
       </div>
