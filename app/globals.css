@@ -72,3 +72,15 @@ a:hover {
   transform-origin: 70% 70%;
   animation: wave 2s infinite;
 }
+/* A utility for a sliding collapse/expand animation */
+.slide-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+/* When .open is also present, allow enough max-height for the content */
+/* 500px is arbitrary—just needs to be >= the tallest possible details block */
+.slide-collapse.open {
+  max-height: 500px;
+}

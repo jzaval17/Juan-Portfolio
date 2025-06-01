@@ -8,6 +8,7 @@ const projects = [
     name: "Tower Detection Using Mask RCNN w/ CostQuest",
     logo: "/CQALogo.svg", // place this file in public/project-logos/
     tech: "Python, Machine Learning",
+    link: "https://www.costquest.com/", // Added CostQuest website link
     bullets: [
       "Collaborated on the data cleaning, preprocessing, and feature engineering pipeline for satellite imagery, improving model training quality and reducing noise by 30 %.",
       "Deployed a Mask R-CNN model to identify towers, shadows, and buildings with 92 % mAP, enhancing geospatial analysis for infrastructure mapping.",
@@ -52,7 +53,23 @@ export default function Projects() {
               />
             </div>
             <div className={styles.details}>
-              <h3 className={styles.name}>{proj.name}</h3>
+              <h3 className={styles.name}>
+                {proj.name === "Tower Detection Using Mask RCNN w/ CostQuest" ? (
+                  <>
+                    Tower Detection Using Mask RCNN w/&nbsp;
+                    <a
+                      href={proj.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#2563eb", textDecoration: "underline" }}
+                    >
+                      CostQuest
+                    </a>
+                  </>
+                ) : (
+                  proj.name
+                )}
+              </h3>
               <p className={styles.tech}>{proj.tech}</p>
               <ul className={styles.bullets}>
                 {proj.bullets.map((b, i) => (

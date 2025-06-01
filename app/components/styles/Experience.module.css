@@ -1,7 +1,7 @@
 /* app/components/styles/Experience.module.css */
 
 .experience {
-  /* The .section class (in globals.css) gives top/bottom padding */
+  /* (Inherited vertical padding from .section) */
 }
 
 .heading {
@@ -14,65 +14,124 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem; /* space between each item */
 }
 
-.job {
+/* Entire box around each experience */
+.item {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(31, 41, 55, 0.06);
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+.item:hover {
+  box-shadow: 0 6px 24px rgba(31, 41, 55, 0.12);
+  transform: translateY(-2px) scale(1.01);
+}
+
+/* Header row: toggles collapse/expand */
+.header {
   display: flex;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9fafb;
+  padding: 0.85rem 1.25rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+  border-bottom: 1px solid #f3f4f6;
+}
+.header:hover {
+  background-color: #f3f4f6;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
   gap: 1rem;
 }
 
 .logoWrapper {
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #f3f4f6; /* gray-100 */
+  background-color: #f3f4f6;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid #e5e7eb;
 }
 
 .logo {
   object-fit: contain;
-}
-
-.details {
-  flex: 1;
+  width: 80%;
+  height: 80%;
+  filter: grayscale(20%);
 }
 
 .company {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-  color: #111827; /* gray-900 */
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  letter-spacing: 0.01em;
+  padding-right: 0.5rem;
+  border-right: 1px solid #e5e7eb;
 }
 
 .role {
-  color: #4b5563; /* gray-600 */
-  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin: 0 0 0 0.5rem;
+  font-weight: 500;
+}
+
+.caret {
+  font-size: 1.3rem;
+  line-height: 1;
+  color: #6b7280;
+  transition: transform 0.2s;
+}
+
+/* The wrapper around “details” that gets its max-height toggled */
+.details {
+  padding: 1.1rem 1.5rem 1.25rem 1.5rem;
+  background-color: #fcfcfd;
+  transition: background 0.2s;
 }
 
 .dates {
-  font-size: 0.875rem;
-  color: #9ca3af; /* gray-400 */
-  margin-bottom: 0.25rem;
+  font-size: 0.89rem;
+  color: #9ca3af;
+  margin: 0;
+  font-style: italic;
 }
 
 .location {
-  font-size: 0.875rem;
-  color: #6b7280; /* gray-500 */
-  margin-bottom: 0.5rem;
+  font-size: 0.89rem;
+  color: #6b7280;
+  margin: 0.25rem 0 0.75rem 0;
 }
 
 .bullets {
   list-style-type: disc;
-  padding-left: 1.25rem;
+  padding-left: 1.5rem;
+  margin: 0.5rem 0 0 0;
 }
-
 .bullets li {
-  margin-bottom: 0.25rem;
-  color: #4b5563; /* gray-600 */
+  margin-bottom: 0.5rem;
+  color: #374151;
+  line-height: 1.6;
+  border-radius: 4px;
+  padding: 0.15rem 0.25rem;
+  transition: background 0.15s;
+}
+.bullets li:hover {
+  background: #f3f4f6;
 }

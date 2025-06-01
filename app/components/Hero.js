@@ -20,7 +20,7 @@ export default function Hero() {
 
         <h1 className={styles.title}>
           Nice to meet you! <br />
-          I’m <span className={styles.name}>Juan Zavala</span>{" "}
+          I’m <span className={styles.name}>Juan</span>{" "}
           <span className="wave">👋</span>
         </h1>
         <p className={styles.tagline}>

@@ -1,4 +1,5 @@
 // app/layout.js
+import Header from "./components/Header";
 import "./globals.css";
 
 export const metadata = {
@@ -11,10 +12,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head />
       <body>
-        {/* You can reuse the same container class for your top-level wrapper */}
-        <main className="container">
-          {children}
-        </main>
+        {/* 1. Sticky header */}
+        <Header />
+
+        {/* 2. Main page content */}
+        <main className="container">{children}</main>
       </body>
     </html>
   );

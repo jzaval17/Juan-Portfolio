@@ -1,0 +1,96 @@
+/* app/components/styles/Header.module.css */
+
+/* 1. Overall header container */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb; /* light gray */
+}
+
+/* 2. Left side: social icons */
+.socials {
+  display: flex;
+  gap: 0.5rem;
+  min-width: 60px; /* Adjust based on your icon count */
+}
+
+/* Each social icon link */
+.iconLink {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: invert(20%) sepia(0%) saturate(0%) hue-rotate(180deg)
+    brightness(90%) contrast(90%); /* makes a black SVG appear dark gray */
+}
+
+/* 3. Center: your name/logo */
+.center {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937; /* gray-800 */
+  text-decoration: none;
+}
+
+/* 4. Right side: nav links */
+.nav {
+  display: flex;
+  gap: 1rem;
+  min-width: 120px; /* Adjust based on your nav links */
+}
+
+.link {
+  font-size: 0.875rem;
+  color: #4b5563; /* gray-600 */
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #1f2937; /* gray-800 */
+}
+
+/* 5. Mobile tweak: shrink gaps/text on small screens */
+@media (max-width: 640px) {
+  .socials {
+    gap: 0.25rem;
+  }
+  .iconLink {
+    width: 20px;
+    height: 20px;
+  }
+  .logo {
+    font-size: 1rem;
+  }
+  .nav {
+    gap: 0.5rem;
+  }
+  .link {
+    font-size: 0.75rem;
+  }
+}
+
+.iconLink:focus,
+.link:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}

@@ -1,25 +1,25 @@
-// app/components/Experience.js
 "use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./styles/Experience.module.css";
 
 const experiences = [
   {
     company: "Cal Poly Information Technology Services",
-    logo: "/calpoly-its-logo.avif",      // put calpoly-its-logo.png into public/
+    logo: "/calpoly-its-logo.avif",
     role: "IT Support Lead",
     dates: "May 2024 – Present",
     location: "San Luis Obispo, CA",
     bullets: [
       "Lead weekly student standups to communicate technical updates and streamline workflow processes.",
       "Support technicians in infrastructure upgrades and resolve hardware/network issues across campus offices.",
-      "Deployed 100+ systems in 3 months, improving employee onboarding efficiency by 20%.",
-      "Resolved 50+ infrastructure issues, reducing downtime and boosting team productivity by 20%.",
+      "Deployed 100+ systems in 3 months, improving employee onboarding efficiency by 20 %.",
+      "Resolved 50+ infrastructure issues, reducing downtime and boosting team productivity by 20 %.",
     ],
   },
   {
     company: "Cal Poly Computer Science Department | AI for Search & Rescue",
-    logo: "/cs-logo.jpg",      // put calpoly-cs-logo.png into public/
+    logo: "/cs-logo.jpg",
     role: "Machine Learning Researcher",
     dates: "January 2025 – Present",
     location: "San Luis Obispo, CA",
@@ -30,7 +30,7 @@ const experiences = [
   },
   {
     company: "University Housing",
-    logo: "/university-housing-logo.png",  // put university-housing-logo.png into public/ (or remove <Image> wrapper if you don’t have a logo)
+    logo: "/calpoly-its-logo.avif",
     role: "Student Lead",
     dates: "June 2023 – September 2023",
     location: "San Luis Obispo, CA",
@@ -41,34 +41,63 @@ const experiences = [
 ];
 
 export default function Experience() {
+  // Track which items are expanded
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleExpand = (idx) => {
+    setOpenIndex((prev) => (prev === idx ? null : idx));
+  };
+
   return (
     <section id="experience" className={`${styles.experience} container section`}>
       <h2 className={styles.heading}>Work Experience</h2>
+
       <div className={styles.list}>
-        {experiences.map((exp, idx) => (
-          <div key={idx} className={styles.job}>
-            <div className={styles.logoWrapper}>
-              <Image
-                src={exp.logo}
-                alt={exp.company}
-                width={48}
-                height={48}
-                className={styles.logo}
-              />
+        {experiences.map((exp, idx) => {
+          const isOpen = openIndex === idx;
+          return (
+            <div key={idx} className={styles.item}>
+              {/* Header: company + role + caret */}
+              <div
+                className={styles.header}
+                onClick={() => toggleExpand(idx)}
+                role="button"
+              >
+                <div className={styles.headerLeft}>
+                  <div className={styles.logoWrapper}>
+                    <Image
+                      src={exp.logo}
+                      alt={exp.company}
+                      width={40}
+                      height={40}
+                      className={styles.logo}
+                    />
+                  </div>
+                  <div>
+                    <p className={styles.company}>{exp.company}</p>
+                    <p className={styles.role}>{exp.role}</p>
+                  </div>
+                </div>
+                <span className={styles.caret}>{isOpen ? "▼" : "►"}</span>
+              </div>
+
+              {/* Details: always rendered, but height is toggled via CSS */}
+              <div
+                className={`slide-collapse ${isOpen ? "open" : ""}`}
+              >
+                <div className={styles.details}>
+                  <p className={styles.dates}>{exp.dates}</p>
+                  <p className={styles.location}>{exp.location}</p>
+                  <ul className={styles.bullets}>
+                    {exp.bullets.map((b, i) => (
+                      <li key={i}>{b}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div className={styles.details}>
-              <h3 className={styles.company}>{exp.company}</h3>
-              <p className={styles.role}>{exp.role}</p>
-              <p className={styles.dates}>{exp.dates}</p>
-              <p className={styles.location}>{exp.location}</p>
-              <ul className={styles.bullets}>
-                {exp.bullets.map((b, i) => (
-                  <li key={i}>{b}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

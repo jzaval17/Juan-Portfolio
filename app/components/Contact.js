@@ -9,39 +9,27 @@ export default function Contact() {
       <p className={styles.text}>
         📧 Email me at{" "}
         <a href="mailto:jazavala805@gmail.com" className={styles.link}>
-          juan.zavala@calpoly.edu
+          jazavala805@gmail.com
         </a>
       </p>
       <div className={styles.socials}>
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/jzaval17"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.iconLink}
         >
-          <img src="/icons/github.svg" alt="GitHub" className={styles.icon} />
+          <img src="/github-logo.png" alt="GitHub" className={styles.icon} />
         </a>
         <a
-          href="https://www.linkedin.com/in/yourlinkedin"
+          href="https://www.linkedin.com/in/jz805/"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.iconLink}
         >
           <img
-            src="/icons/linkedin.svg"
+            src="/linkedin-logo.png"
             alt="LinkedIn"
-            className={styles.icon}
-          />
-        </a>
-        <a
-          href="https://twitter.com/yourhandle"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.iconLink}
-        >
-          <img
-            src="/icons/twitter.svg"
-            alt="Twitter"
             className={styles.icon}
           />
         </a>
