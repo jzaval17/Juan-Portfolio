@@ -1,0 +1,78 @@
+/* app/components/styles/Experience.module.css */
+
+.experience {
+  /* The .section class (in globals.css) gives top/bottom padding */
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #111827; /* gray-900 */
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.job {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.logoWrapper {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f3f4f6; /* gray-100 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  object-fit: contain;
+}
+
+.details {
+  flex: 1;
+}
+
+.company {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #111827; /* gray-900 */
+}
+
+.role {
+  color: #4b5563; /* gray-600 */
+  margin-bottom: 0.25rem;
+}
+
+.dates {
+  font-size: 0.875rem;
+  color: #9ca3af; /* gray-400 */
+  margin-bottom: 0.25rem;
+}
+
+.location {
+  font-size: 0.875rem;
+  color: #6b7280; /* gray-500 */
+  margin-bottom: 0.5rem;
+}
+
+.bullets {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+}
+
+.bullets li {
+  margin-bottom: 0.25rem;
+  color: #4b5563; /* gray-600 */
+}
