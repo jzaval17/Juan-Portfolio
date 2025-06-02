@@ -5,7 +5,7 @@ const education = [
     school: "California Polytechnic State University-San Luis Obispo",
     degree: "Bachelor's degree, Computer Science",
     dates: "2021 – 2025",
-    logo: "/calpoly-logo.png"
+    logo: "/calpoly-its-logo.avif"
   },
   {
     school: "California State University, Bakersfield",
@@ -17,13 +17,13 @@ const education = [
     school: "Bakersfield College",
     degree: "Concurrent/Dual Enrollment",
     dates: "Jan 2020 – Jan 2021",
-    logo: "/bc-logo.png"
+    logo: "/bc-logo.jpg"
   },
   {
     school: "Ridgeview High School",
     degree: "High School Diploma",
     dates: "Aug 2017 – May 2021",
-    logo: "/ridgeview-logo.png"
+    logo: "/ridgeview-logo.jpg"
   }
 ];
 
