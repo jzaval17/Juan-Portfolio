@@ -18,15 +18,17 @@ const projects = [
     name: "Pawsitive Studying Application",
     logo: "/PSApp.png", // place this file in public/project-logos/
     tech: "JavaScript, React Native/Expo, Express, MongoDB, Azure",
+    repo: "https://github.com/yourusername/pawsitive-studying", // <-- Add your repo link here
     bullets: [
       "Led backend development efforts and analyzed user metrics to drive a 20 % improvement in user focus.",
       "Conducted data analysis on user engagement metrics to demonstrate a 20 % improvement in focus on assignments, providing actionable insights for feature optimization.",
     ],
   },
- {
+  {
     name: "Sea Level Rise Prediction",
-    logo: "/sea-level-logo.png", 
+    logo: "/sea-level-logo.png",
     tech: "Python, Pandas, Matplotlib, Scikit-learn, Streamlit",
+    repo: "https://github.com/jzaval17/DATA-301/tree/main/proj1", // <-- Add your repo link here
     bullets: [
       "Cleaned and preprocessed historic NOAA sea level data using Pandas, improving model input quality and reducing missing values by 15%.",
       "Trained Linear Regression and SVM models to forecast sea level trends, achieving an R² of 0.93 on test data.",
@@ -66,6 +68,17 @@ export default function Projects() {
                       CostQuest
                     </a>
                   </>
+                ) : proj.name === "Pawsitive Studying Application" ? (
+                  proj.name
+                ) : proj.repo ? (
+                  <a
+                    href={proj.repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#2563eb", textDecoration: "underline" }}
+                  >
+                    {proj.name}
+                  </a>
                 ) : (
                   proj.name
                 )}
