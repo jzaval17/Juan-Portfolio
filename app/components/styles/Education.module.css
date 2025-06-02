@@ -1,9 +1,5 @@
 .education {
   margin: 3rem 0;
-  background: var(--bg-color);
-  border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  padding: 2rem 1.5rem;
 }
 
 .heading {
@@ -21,12 +17,10 @@
 
 .item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1.25rem;
-  background: var(--card-bg);
+  padding: 0.75rem 0;
   border-radius: 0.75rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-  padding: 1.25rem 1rem;
 }
 
 .logoWrapper {
@@ -34,7 +28,7 @@
   height: 48px;
   min-width: 48px;
   min-height: 48px;
-  border-radius: 8px;
+  border-radius: 50%;
   overflow: hidden;
   background: var(--bg-color);
   display: flex;
@@ -49,39 +43,33 @@
   display: block;
 }
 
-.details {
+.info {
   flex: 1;
+  min-width: 0;
 }
 
 .school {
   font-weight: 600;
   color: var(--text-color);
-  font-size: 1.1rem;
-  margin-bottom: 0.15rem;
+  font-size: 1.08rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .degree {
-  font-size: 1rem;
+  font-size: 0.98rem;
   color: var(--text-color);
-  opacity: 0.9;
+  opacity: 0.85;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .dates {
-  font-size: 0.95rem;
-  color: var(--text-color);
-  opacity: 0.8;
-  margin-bottom: 0.3rem;
-}
-
-.bullets {
-  margin: 0.3rem 0 0 0;
-  padding-left: 1.2rem;
-  color: var(--text-color);
-  font-size: 0.98rem;
-}
-
-.bullets li {
-  margin-bottom: 0.2rem;
-  color: var(--text-color);
-  line-height: 1.5;
+  color: #b0b0b0;
+  font-size: 1rem;
+  min-width: 100px;
+  text-align: right;
+  letter-spacing: 0.05em;
 }
